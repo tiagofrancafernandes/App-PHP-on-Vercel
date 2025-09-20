@@ -100,6 +100,20 @@ if (!function_exists('request_any_get')) {
     }
 }
 
+if (!function_exists('request_uri')) {
+    /**
+     * function request_uri
+     *
+     * @param tring $defaultValue
+     *
+     * @return mixed
+     */
+    function request_uri(string $defaultValue = '/'): string
+    {
+        return $uri = $_SERVER['REQUEST_URI'] ?? $defaultValue;
+    }
+}
+
 if (!function_exists('request_cookie_get')) {
     /**
      * function request_cookie_get
