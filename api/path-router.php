@@ -3,7 +3,7 @@
 
 $uri = request_uri();
 
-define('CONTENT_PATH', realpath(__DIR__ . '/www-content'));
+define('CONTENT_PATH', realpath(__DIR__ . '/../www-content'));
 
 $fallbackController = function(string $_uri, bool $onlyRoutes = false) {
     // If $onlyRoutes is 'true', other uris will return 404
