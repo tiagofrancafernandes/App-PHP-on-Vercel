@@ -17,7 +17,6 @@ if (!headers_sent()) {
     http_response_code(404);
 }
 
-
 ?>
 
 <!DOCTYPE html>

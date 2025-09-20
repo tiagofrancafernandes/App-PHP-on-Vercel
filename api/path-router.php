@@ -27,4 +27,13 @@ $filePath = match (trim(ltrim($uri, '/'))) {
     default => $fallbackController($uri),
 };
 
-require $filePath;
+response_as_json([
+    CONTENT_PATH,
+    $filePath,
+]);
+
+die();
+
+if ($filePath) {
+    require $filePath;
+}
