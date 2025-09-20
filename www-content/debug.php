@@ -3,7 +3,7 @@
 $fileName = str_replace(
     '/var/task/user/',
     '',
-    $_SERVER['SCRIPT_FILENAME'] ?? '',
+    $_SERVER['PHP_SELF'] ?? '',
 );
 
 var_export([
